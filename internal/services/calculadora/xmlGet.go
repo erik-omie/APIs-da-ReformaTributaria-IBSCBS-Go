@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+// Tipos de DFe para validação de XML
 func XmlValidate() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/xml/validate"
@@ -35,6 +36,7 @@ func XmlValidate() {
 
 }
 
+// Tipos de DFe para geração de XML
 func XmlGenerate() {
 
 	url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/xml/generate"

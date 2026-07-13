@@ -1,7 +1,8 @@
 package main
 
 import (
-	"api-tributos/internal/services/calculadora"
+	//"api-tributos/internal/services/calculadora"
+	dados "api-tributos/internal/services/dadosabertos"
 	"fmt"
 )
 
@@ -10,7 +11,11 @@ func main() {
 	fmt.Println("🚀 Iniciando o Sistema de Consulta de Tributos...")
 
 	//calculadora.XmlValidate()
-	calculadora.XmlGenerate()
+	//calculadora.XmlGenerate()
+	//dados.GetUf()
+	//dados.GetVersao()
+	//dados.GetMunicipios()
+	dados.GetTransferenciasIbs()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
