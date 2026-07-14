@@ -15,7 +15,9 @@ func main() {
 	//dados.GetUf()
 	//dados.GetVersao()
 	//dados.GetMunicipios()
-	dados.GetTransferenciasIbs()
+	//dados.GetTransferenciasIbs()
+	//dados.GetTransferenciasCbs()
+	dados.GetImpostoSeletivo()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
