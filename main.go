@@ -17,7 +17,10 @@ func main() {
 	//dados.GetMunicipios()
 	//dados.GetTransferenciasIbs()
 	//dados.GetTransferenciasCbs()
-	dados.GetImpostoSeletivo()
+	//dados.GetImpostoSeletivo()
+	//dados.GetCbsIbs()
+	//dados.GetRedutores()
+	dados.GetNcm()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
