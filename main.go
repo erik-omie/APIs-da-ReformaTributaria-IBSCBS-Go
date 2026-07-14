@@ -20,7 +20,16 @@ func main() {
 	//dados.GetImpostoSeletivo()
 	//dados.GetCbsIbs()
 	//dados.GetRedutores()
-	dados.GetNcm()
+	//dados.GetNcm()
+	//dados.GetNbs()
+	//dados.GetNbsLista()
+	//dados.GetNbsAplicaveis()
+	//dados.GetFundamentacoesLegais()
+	//dados.GetClassNbs()
+	//dados.GetClassImpostoSeletivo()
+	//dados.GetImpostoSeletivoCst()
+	//dados.GetClassTribCbsIbs()
+	dados.GetClassTribCbsIbsUf()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
