@@ -263,12 +263,12 @@ func GetNcm() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/ncm"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("ncm", "24021000")    // Código NCM sem formatação Exemplo : "24021000"
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("ncm", "24021000")    // Código NCM sem formatação Exemplo : "24021000"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -299,12 +299,12 @@ func GetNbs() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/nbs"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("nbs", "114052200")   // Código NBS sem formatação Exemplo : "24021000"
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("nbs", "114052200")   // Código NBS sem formatação Exemplo : "24021000"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -335,11 +335,11 @@ func GetNbsLista() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/nbs/lista"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -371,12 +371,12 @@ func GetNbsAplicaveis() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/nbs-aplicaveis"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("cClassTrib", "000001") // Código da Classificação Tributária (cClassTrib) Exemplo : "000001"
-	paramentos.Add("data", "2027-01-01")   // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("cClassTrib", "000001") // Código da Classificação Tributária (cClassTrib) Exemplo : "000001"
+	parametros.Add("data", "2027-01-01")   // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -407,11 +407,11 @@ func GetFundamentacoesLegais() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/fundamentacoes-legais"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -442,12 +442,12 @@ func GetClassNbs() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/classificacoes-tributarias/nbs"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("nbs", "114052200")   // Código NBS sem formatação Exemplo : "24021000"
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("nbs", "114052200")   // Código NBS sem formatação Exemplo : "24021000"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -515,11 +515,11 @@ func GetImpostoSeletivoCst() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/classificacoes-tributarias/imposto-seletivo/" + cst
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -550,11 +550,11 @@ func GetClassTribCbsIbs() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/classificacoes-tributarias/cbs-ibs"
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
@@ -588,11 +588,11 @@ func GetClassTribCbsIbsUf() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/classificacoes-tributarias/imposto-seletivo/" + siglaDfe + "/" + cClassTrib
 
-	paramentos := url.Values{}
+	parametros := url.Values{}
 
-	paramentos.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
-	UrlCompleta := Url + "?" + paramentos.Encode()
+	UrlCompleta := Url + "?" + parametros.Encode()
 
 	// Fazendo a requisução via client
 	dados, err := client.RequisicaoGet(UrlCompleta)
