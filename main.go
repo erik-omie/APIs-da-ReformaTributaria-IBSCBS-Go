@@ -2,7 +2,8 @@ package main
 
 import (
 	//"api-tributos/internal/services/calculadora"
-	dados "api-tributos/internal/services/dadosabertos"
+	//dados "api-tributos/internal/services/dadosabertos"
+	pedagio "api-tributos/internal/services/pedagio"
 	"fmt"
 )
 
@@ -32,7 +33,8 @@ func main() {
 	//dados.GetClassTribCbsIbsUf()
 	//dados.GetAliqUniao()
 	//dados.GetAliqUf()
-	dados.GetAliqMun()
+	//dados.GetAliqMun()
+	pedagio.PostPedagioCalc()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
