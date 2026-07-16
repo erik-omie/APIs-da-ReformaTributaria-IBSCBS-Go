@@ -29,7 +29,10 @@ func main() {
 	//dados.GetClassImpostoSeletivo()
 	//dados.GetImpostoSeletivoCst()
 	//dados.GetClassTribCbsIbs()
-	dados.GetClassTribCbsIbsUf()
+	//dados.GetClassTribCbsIbsUf()
+	//dados.GetAliqUniao()
+	//dados.GetAliqUf()
+	dados.GetAliqMun()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }

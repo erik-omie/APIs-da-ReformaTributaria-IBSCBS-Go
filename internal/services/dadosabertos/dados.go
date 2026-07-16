@@ -617,3 +617,110 @@ func GetClassTribCbsIbsUf() {
 	fmt.Println("✅ Resposta da API de obtenção das UFs:", jsonFormatado.String())
 
 }
+
+// Obtém a alíquota padrão ou de referência para CBS
+func GetAliqUniao() {
+
+	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/aliquota-uniao"
+
+	parametros := url.Values{}
+
+	parametros.Add("data", "2026-07-16") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+
+	UrlCompleta := Url + "?" + parametros.Encode()
+
+	// Fazendo a requisução via client
+	dados, err := client.RequisicaoGet(UrlCompleta)
+
+	//tratamento de erro
+	if err != nil {
+		fmt.Println("Erro ao fazer a requisição:", err)
+		return
+	}
+
+	// Guardando o resultado da requisição em um buffer para formatação JSON
+	var jsonFormatado bytes.Buffer
+
+	erroIndent := json.Indent(&jsonFormatado, dados, "", "  ")
+
+	if erroIndent != nil {
+		fmt.Println("Erro ao formatar o JSON:", erroIndent)
+		return
+	}
+
+	//Convertemos os bytes recebidos para texto e imprimimos na tela
+	fmt.Println("✅ Resposta da API de obtenção das UFs:", jsonFormatado.String())
+
+}
+
+// Obtém a alíquota padrão ou de referência para IBS Estadual
+func GetAliqUf() {
+
+	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/aliquota-uf"
+
+	parametros := url.Values{}
+
+	parametros.Add("codigoUf", "43")     // Código da UF Exemplo : 43
+	parametros.Add("data", "2027-01-01") //Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+
+	UrlCompleta := Url + "?" + parametros.Encode()
+
+	// Fazendo a requisução via client
+	dados, err := client.RequisicaoGet(UrlCompleta)
+
+	//tratamento de erro
+	if err != nil {
+		fmt.Println("Erro ao fazer a requisição:", err)
+		return
+	}
+
+	// Guardando o resultado da requisição em um buffer para formatação JSON
+	var jsonFormatado bytes.Buffer
+
+	erroIndent := json.Indent(&jsonFormatado, dados, "", "  ")
+
+	if erroIndent != nil {
+		fmt.Println("Erro ao formatar o JSON:", erroIndent)
+		return
+	}
+
+	//Convertemos os bytes recebidos para texto e imprimimos na tela
+	fmt.Println("✅ Resposta da API de obtenção das UFs:", jsonFormatado.String())
+
+}
+
+// Obtém a alíquota padrão ou de referência para IBS Municipal
+func GetAliqMun() {
+
+	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/dados-abertos/aliquota-municipio"
+
+	parametros := url.Values{}
+
+	parametros.Add("codigoMunicipio", "4314902") // Código do Município (Tabela IBGE) Exemplo : 4314902
+	parametros.Add("data", "2027-01-01")         //Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+
+	UrlCompleta := Url + "?" + parametros.Encode()
+
+	// Fazendo a requisução via client
+	dados, err := client.RequisicaoGet(UrlCompleta)
+
+	//tratamento de erro
+	if err != nil {
+		fmt.Println("Erro ao fazer a requisição:", err)
+		return
+	}
+
+	// Guardando o resultado da requisição em um buffer para formatação JSON
+	var jsonFormatado bytes.Buffer
+
+	erroIndent := json.Indent(&jsonFormatado, dados, "", "  ")
+
+	if erroIndent != nil {
+		fmt.Println("Erro ao formatar o JSON:", erroIndent)
+		return
+	}
+
+	//Convertemos os bytes recebidos para texto e imprimimos na tela
+	fmt.Println("✅ Resposta da API de obtenção das UFs:", jsonFormatado.String())
+
+}
