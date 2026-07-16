@@ -1,5 +1,13 @@
 package nfse
 
+import (
+	"api-tributos/internal/client"
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"net/url"
+)
+
 func GetClassTributarias() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/nfse/situacoes-classificacoes-tributarias"
@@ -7,7 +15,7 @@ func GetClassTributarias() {
 	parametros := url.Values{}
 
 	parametros.Add("data", "2026-06-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
-	parametros.Add("nbs", "101011100") // Código NBS sem formatação Exemplo : "24021000"
+	parametros.Add("nbs", "101011100")   // Código NBS sem formatação Exemplo : "24021000"
 
 	UrlCompleta := Url + "?" + parametros.Encode()
 
@@ -34,15 +42,14 @@ func GetClassTributarias() {
 
 }
 
-
-func GetLocalOperacao(){
+func GetLocalOperacao() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/nfse/local-operacao"
 
 	parametros := url.Values{}
 
-	parametros.Add("cIndOp", "100301") // Código do indicador de Operação (6 dígitos) Exemplo : "100301"
-	parametros.Add("dataOcorrenciaFatoGerador", "2026-06-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"	
+	parametros.Add("cIndOp", "100301")                        // Código do indicador de Operação (6 dígitos) Exemplo : "100301"
+	parametros.Add("dataOcorrenciaFatoGerador", "2026-06-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
 	UrlCompleta := Url + "?" + parametros.Encode()
 
