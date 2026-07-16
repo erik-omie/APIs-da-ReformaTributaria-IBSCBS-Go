@@ -8,6 +8,7 @@ import (
 	"net/url"
 )
 
+// Retorna todas as combinações de Classificações Tributárias e Situações Tributárias associadas a um código NBS em uma data específica
 func GetClassTributarias() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/nfse/situacoes-classificacoes-tributarias"
@@ -42,6 +43,7 @@ func GetClassTributarias() {
 
 }
 
+// Consulta o local da operação baseado no código do Indicador de Operação (cIndOp) e data de ocorrência do fato gerador
 func GetLocalOperacao() {
 
 	Url := "https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/api/calculadora/nfse/local-operacao"
