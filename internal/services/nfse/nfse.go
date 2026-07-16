@@ -8,6 +8,14 @@ import (
 	"net/url"
 )
 
+/*
+Este documento apresenta a especificação técnica e o guia de integração para a API de NFS-e (Versão Beta), desenvolvida integralmente em Go (Golang) para garantir resiliência, baixo consumo de memória e agilidade na comunicação com diversas prefeituras.
+
+Ele centraliza todas as instruções, parâmetros e endpoints necessários para a emissão, consulta e cancelamento de Notas Fiscais de Serviços Eletrônicas de forma automatizada.
+
+⚠️ Nota de Versão: Por se tratar de uma versão BETA, os endpoints e estruturas de retorno estão sujeitos a ajustes e melhorias contínuas.
+*/
+
 // Retorna todas as combinações de Classificações Tributárias e Situações Tributárias associadas a um código NBS em uma data específica
 func GetClassTributarias() {
 

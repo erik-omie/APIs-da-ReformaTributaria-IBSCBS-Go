@@ -7,6 +7,14 @@ import (
 	"fmt"
 )
 
+/*
+Este documento apresenta a especificação técnica e o guia de integração para a API da Calculadora (Versão Beta), desenvolvida integralmente em Go (Golang) para entregar altíssima performance e concorrência nativa em cálculos aritméticos e tributários de grande escala.
+
+Ele centraliza todas as instruções, parâmetros e endpoints necessários para processar simulações de impostos de forma rápida, flexível e padronizada.
+
+⚠️ Nota de Versão: Por se tratar de uma versão BETA, os endpoints e estruturas de retorno estão sujeitos a ajustes e melhorias contínuas.
+*/
+
 // Tipos de DFe para validação de XML
 func XmlValidate() {
 

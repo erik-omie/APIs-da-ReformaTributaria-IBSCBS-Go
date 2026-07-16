@@ -8,6 +8,15 @@ import (
 	"net/url"
 )
 
+/*
+Este documento apresenta a especificação técnica e o guia de integração para a API de Dados Abertos (Versão Beta), desenvolvida integralmente em Go (Golang) para garantir alta performance, eficiência e concorrência nativa no processamento das requisições.
+
+Ele centraliza todas as instruções, parâmetros e endpoints necessários para a realização de Consultas para os Dados Abertos, permitindo que desenvolvedores e parceiros consumam as informações públicas de forma automatizada e padronizada.
+
+⚠️ Nota de Versão: Por se tratar de uma versão BETA, os endpoints e estruturas de retorno estão sujeitos a ajustes e melhorias contínuas.
+
+*/
+
 // Obtém a versão do aplicativo e do banco de dados
 func GetVersao() {
 
