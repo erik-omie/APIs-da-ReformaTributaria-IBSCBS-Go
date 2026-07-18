@@ -1,9 +1,7 @@
 package main
 
 import (
-	//"api-tributos/internal/services/calculadora"
-	//dados "api-tributos/internal/services/dadosabertos"
-	pedagio "api-tributos/internal/services/pedagio"
+	dados "api-tributos/internal/services/dadosabertos"
 	"fmt"
 )
 
@@ -31,10 +29,10 @@ func main() {
 	//dados.GetImpostoSeletivoCst()
 	//dados.GetClassTribCbsIbs()
 	//dados.GetClassTribCbsIbsUf()
-	//dados.GetAliqUniao()
+	dados.GetAliqUniao()
 	//dados.GetAliqUf()
 	//dados.GetAliqMun()
-	pedagio.PostPedagioCalc()
+	//pedagio.PostPedagioCalc()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }

@@ -634,7 +634,7 @@ func GetAliqUniao() {
 
 	parametros := url.Values{}
 
-	parametros.Add("data", "2026-07-16") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
+	parametros.Add("data", "2027-01-01") // Data no padrão ISO 8601 (yyyy-MM-dd) Exemplo : "2027-01-01"
 
 	UrlCompleta := Url + "?" + parametros.Encode()
 

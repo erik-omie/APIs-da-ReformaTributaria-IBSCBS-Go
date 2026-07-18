@@ -22,16 +22,16 @@ func PostPedagioCalc() {
 
 	dadosEnvio := EnvioCalculo{
 		DataHoraEmissao:       "2027-01-01T09:50:05-03:00",
-		CodigoMunicipioOrigem: 4314902,
-		UFMunicipioOrigem:     "RS",
+		CodigoMunicipioOrigem: 4115200,
+		UFMunicipioOrigem:     "PR",
 		CST:                   "000",
 		CClassTrib:            "000002",
 		BaseCalculo:           200,
 		Trechos: []Trecho{
 			{
 				Numero:    1,
-				Municipio: 4314902,
-				UF:        "RS",
+				Municipio: 4115200,
+				UF:        "PR",
 				Extensao:  10,
 			},
 		},
