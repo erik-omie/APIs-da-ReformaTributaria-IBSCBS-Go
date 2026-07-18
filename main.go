@@ -1,7 +1,8 @@
 package main
 
 import (
-	dados "api-tributos/internal/services/dadosabertos"
+	//dados "api-tributos/internal/services/dadosabertos"
+	"api-tributos/internal/services/basecalculo"
 	"fmt"
 )
 
@@ -29,10 +30,11 @@ func main() {
 	//dados.GetImpostoSeletivoCst()
 	//dados.GetClassTribCbsIbs()
 	//dados.GetClassTribCbsIbsUf()
-	dados.GetAliqUniao()
+	//dados.GetAliqUniao()
 	//dados.GetAliqUf()
 	//dados.GetAliqMun()
 	//pedagio.PostPedagioCalc()
+	basecalculo.BaseCalculoIsMercadoriasPost()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
