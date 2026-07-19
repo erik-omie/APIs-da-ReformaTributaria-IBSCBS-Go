@@ -34,7 +34,8 @@ func main() {
 	//dados.GetAliqUf()
 	//dados.GetAliqMun()
 	//pedagio.PostPedagioCalc()
-	basecalculo.BaseCalculoIsMercadoriasPost()
+	//basecalculo.BaseCalculoIsMercadoriasPost()
+	basecalculo.BaseCalculoCbsIbsPost()
 
 	fmt.Println("✅ Execução finalizada com sucesso!")
 }
